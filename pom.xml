@@ -29,6 +29,16 @@
 
   </dependencies>
 
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    
+    <sonar.projectKey>rods7on_UnitTestProject</sonar.projectKey>
+    <sonar.organization>rods7on</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+  </properties>  
+    
   <build>
     <plugins>
       <plugin>
