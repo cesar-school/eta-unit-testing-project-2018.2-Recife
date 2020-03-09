@@ -7,10 +7,9 @@ public class LeapYearCalculatorTest {
 
 
     @Test
-    public void Year_AnoNormal_true() {
-
-        Assertions.assertTrue(true);
-
+    public void year_currentYearLeapIsTrue() {
+        LeapYearCalculator leapYearCalculator = new LeapYearCalculator();
+        Assertions.assertEquals(true, leapYearCalculator.isCurrentYearLeapYear());
     }
 
 //    @Test
