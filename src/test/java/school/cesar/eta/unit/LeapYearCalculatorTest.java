@@ -3,18 +3,36 @@ package school.cesar.eta.unit;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+// * if (year is not divisible by 4) then (it is a common year)
+// * else if (year is not divisible by 100) then (it is a leap year)
+// * else if (year is not divisible by 400) then (it is a common year)
+// * else (it is a leap year)
+
 public class LeapYearCalculatorTest {
 
 
     @Test
-    public void year_currentYearLeapIsTrue() {
-        LeapYearCalculator leapYearCalculator = new LeapYearCalculator();
-        Assertions.assertEquals(true, leapYearCalculator.isCurrentYearLeapYear());
+    public void naoDivisivelPor4_anoNormal() {
+
     }
 
-//    @Test
-//    public void Year_AnoBisexto_true(){
-//        Assertions.assertEquals("Ano Bisexto",
-//                LeapYearCalculator.year(1996));
-//    }
+    @Test
+    public void divisivelPorQuatroMasNaoPorCem_anoBisexto() {
+
+    }
+
+    @Test
+    public void divisivelPor_quatro_cem_MasNaoPor_quatrocentos_anoNormal() {
+
+    }
+
+    @Test
+    public void divisivelPor_quatro_cem_quatrocentos_anoNormal() {
+
+    }
+
 }
+
+
+
+
