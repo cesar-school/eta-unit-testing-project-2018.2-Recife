@@ -17,7 +17,7 @@ public class LeapYearCalculatorTest {
     }
 
     @Test
-    public void divisivelPorQuatroMasNaoPorCem_anoBisexto() {
+    public void divisivelPor_quatro_MasNaoPor_Cem_anoBisexto() {
 
     }
 
