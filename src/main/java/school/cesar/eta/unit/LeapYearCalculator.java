@@ -4,7 +4,7 @@ import java.time.Year;
 
 public class LeapYearCalculator {
 
-    public int getCurrentYear(){
+    public static int getCurrentYear(){
         return Year.now().getValue();
     }
 
@@ -17,7 +17,7 @@ public class LeapYearCalculator {
      *
      * src: https://en.wikipedia.org/wiki/Leap_year#Algorithm
      */
-    public boolean isCurrentYearLeapYear() {
+    public static boolean isCurrentYearLeapYear() {
         final int year = getCurrentYear();
         if(year % 4 != 0) {
             return false;
