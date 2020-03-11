@@ -17,17 +17,17 @@ public class LeapYearCalculatorTest {
     }
 
     @Test
-    public void divisivelPor_quatro_MasNaoPor_Cem_anoBisexto() {
-
-    }
-
-    @Test
     public void divisivelPor_quatro_cem_MasNaoPor_quatrocentos_anoNormal() {
 
     }
 
     @Test
-    public void divisivelPor_quatro_cem_quatrocentos_anoNormal() {
+    public void divisivelPor_quatro_MasNaoPor_Cem_anoBisexto() {
+
+    }
+
+    @Test
+    public void divisivelPor_quatro_cem_quatrocentos_anoBisexto() {
 
     }
 
