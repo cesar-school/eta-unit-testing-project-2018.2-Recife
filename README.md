@@ -1,3 +1,8 @@
+![Java CI](https://github.com/franciscofnneto/unit-testing-project/workflows/Java%20CI/badge.svg)
+![SonarCloud Status](https://sonarcloud.io/api/project_badges/measure?project=franciscofnneto_unit-testing-project&metric=alert_status)
+![SonarCloud Coverage](https://sonarcloud.io/api/project_badges/measure?project=franciscofnneto_unit-testing-project&metric=coverage)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=franciscofnneto/unit-testing-project)](https://dependabot.com)
+
 # Testes Unitários (Projeto)
 
 Projeto da disciplina de Testes Unitários da Especialização em Testes Ágeis, turma
