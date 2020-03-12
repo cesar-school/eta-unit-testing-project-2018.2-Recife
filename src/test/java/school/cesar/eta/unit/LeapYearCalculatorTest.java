@@ -41,13 +41,13 @@ public class LeapYearCalculatorTest{
 
     @Test
     public void year_DivisibleByFourAndByOneHundredButNotDivisibleByFourHundreds_LeapYearFalse(){
-        currentYear = 1990;
+        currentYear = 100;
         Assertions.assertFalse(leapYearCalculator.isCurrentYearLeapYear());
     }
 
     @Test
     public void year_DivisibleByFourAndByOneHundredAndByFourHundreds_LeapYearFalse(){
-        currentYear = 2020;
+        currentYear = 400;
         Assertions.assertTrue(leapYearCalculator.isCurrentYearLeapYear());
     }
 }
