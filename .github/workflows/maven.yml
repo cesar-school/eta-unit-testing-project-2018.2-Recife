@@ -1,12 +1,13 @@
+# This workflow will build a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
 name: Java CI with Maven
 
-on: [push]
+on:
+  build:
 
-jobs:
+    runs-on: ubuntu-latest
 
-build:
-
-runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 1.8
@@ -15,6 +16,6 @@ runs-on: ubuntu-latest
         java-version: 1.8
     - name: Build with Maven
       run: mvn verify sonar:sonar
-     env:
+      env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
