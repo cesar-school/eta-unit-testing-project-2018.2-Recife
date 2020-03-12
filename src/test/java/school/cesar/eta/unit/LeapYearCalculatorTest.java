@@ -32,20 +32,26 @@ public class LeapYearCalculatorTest {
     }
 
     @Test
-    public void verifyYear_DivisibleByFour_True(){
-        currentYear = 4;
+    public void verifyYear_notDivisibleBy4(){
+        currentYear = 1999;
+        Assertions.assertFalse(leapYearCalculator.isCurrentYearLeapYear());
+    }
+
+    @Test
+    public void verifyYear_DivisibleBy4_notBy100(){
+        currentYear = 2016;
         Assertions.assertTrue(leapYearCalculator.isCurrentYearLeapYear());
     }
 
     @Test
-    public void verifyYear_DivisibleBy100_True(){
-        currentYear = 100;
-        Assertions.assertTrue(leapYearCalculator.isCurrentYearLeapYear());
+    public void verifyYear_DivisibleBy4_By100_notBy400(){
+        currentYear = 200;
+        Assertions.assertFalse(leapYearCalculator.isCurrentYearLeapYear());
     }
 
     @Test
-    public void verifyYear_DivisibleBy400_True(){
-        currentYear = 400;
+    public void verifyYear_DivisibleBy4_By100_By400(){
+        currentYear = 2000;
         Assertions.assertTrue(leapYearCalculator.isCurrentYearLeapYear());
     }
 
