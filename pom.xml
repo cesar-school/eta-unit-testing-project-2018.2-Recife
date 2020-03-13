@@ -10,7 +10,6 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
 
-
     <sonar.projectKey>amscesar_unit-testing-project</sonar.projectKey>
     <sonar.organization>amscesar</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
