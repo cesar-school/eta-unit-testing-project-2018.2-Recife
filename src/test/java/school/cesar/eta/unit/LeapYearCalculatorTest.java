@@ -24,6 +24,7 @@ public class LeapYearCalculatorTest {
         };
     }
 
+    //Anos normais
     @Test
     public void naoDivisivelPor4_anoNormal() {
         ano = 2003;
@@ -37,6 +38,7 @@ public class LeapYearCalculatorTest {
         Assertions.assertFalse(calc.isCurrentYearLeapYear());
     }
 
+    //Anos bisextos
     @Test
     public void divisivelPor_quatro_MasNaoPor_Cem_anoBisexto() {
         ano = 2016;
