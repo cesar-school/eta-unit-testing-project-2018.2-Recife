@@ -27,7 +27,7 @@ public class PeopleComparator {
 
     public boolean isSameFamily(Person firstPerson, Person secondPerson){
         if(firstPerson.getName().equals(secondPerson.getName())){
-            return false;
+            return true;
         }
         if(!firstPerson.getLastName().equals(secondPerson.getLastName())){
             return false;
