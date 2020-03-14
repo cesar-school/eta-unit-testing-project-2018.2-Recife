@@ -12,14 +12,14 @@ public class PeopleComparatorTest {
 
     PersonBuilder personBuilder;
     PeopleComparator personComparator;
-    LocalDate localDate = LocalDate.now();
+    LocalDate now = LocalDate.now();
 
     @BeforeEach
     public void setUpTest(){
         personComparator = new PeopleComparator(){
             @Override
             public LocalDate getCurrentDate(){
-                return localDate;
+                return now;
             }
         };
         personBuilder = new PersonBuilder();
@@ -27,19 +27,19 @@ public class PeopleComparatorTest {
 
     @Test
     public void dayNow_IsPersonBirthDay_true(){
-        Person person = personBuilder.setBirthday(localDate).build();
+        Person person = personBuilder.setBirthday(now).build();
         Assertions.assertTrue(personComparator.isTodayPersonsBirthDay(person));
     }
 
     @Test
     public void today_IsNotPersonBirthDay_false(){
-        Person person = personBuilder.setBirthday(localDate.minusDays(20)).build();
+        Person person = personBuilder.setBirthday(now.minusDays(20)).build();
         Assertions.assertFalse(personComparator.isTodayPersonsBirthDay(person));
     }
 
     @Test
     public void leapYear_PersonBirthDayOnNonLeapYear_false(){
-        localDate = LocalDate.of(2019, Month.MARCH, 12);
+        now = LocalDate.of(2019, Month.MARCH, 12);
         LocalDate birthday = LocalDate.of(1984, Month.FEBRUARY, 29);
         Person person = personBuilder.setBirthday(birthday).build();
         Assertions.assertFalse(personComparator.isTodayPersonsBirthDay(person));
@@ -145,7 +145,7 @@ public class PeopleComparatorTest {
     @Test
     public void twoPeople_SameBirthday_false(){
         Person firstPerson = personBuilder.build();
-        Person secondPerson = personBuilder.setBirthday(localDate.minusDays(1)).build();
+        Person secondPerson = personBuilder.setBirthday(now.minusDays(1)).build();
         Assertions.assertFalse(personComparator.isSamePerson(firstPerson, secondPerson));
     }
 
