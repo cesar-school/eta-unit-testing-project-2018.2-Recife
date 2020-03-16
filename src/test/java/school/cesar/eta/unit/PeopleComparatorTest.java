@@ -80,5 +80,4 @@ public class PeopleComparatorTest {
                 Assertions.assertFalse(peopleComparator.isSamePerson(firstPerson, secondPerson));
         }
 
-
 }
