@@ -21,6 +21,6 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -x verify sonar:sonar
+      run: mvn test sonar:sonar
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
