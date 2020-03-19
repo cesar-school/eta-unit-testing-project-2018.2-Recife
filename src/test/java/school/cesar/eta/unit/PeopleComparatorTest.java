@@ -44,6 +44,14 @@ public class PeopleComparatorTest {
         Person person = personBuilder.setBirthday(birthday).build();
         Assertions.assertFalse(personComparator.isTodayPersonsBirthDay(person));
     }
+    
+    @Test
+    public void leapYear_PersonBirthDayOnNonLeapYear_true(){
+        now = LocalDate.of(2019, Month.MARCH, 12);
+        LocalDate birthday = LocalDate.of(2019, Month.MARCH, 12);
+        Person person = personBuilder.setBirthday(birthday).build();
+        Assertions.assertTrue(personComparator.isTodayPersonsBirthDay(person));
+    }
 
     @Test
     public void people_SameInformationName_true(){
