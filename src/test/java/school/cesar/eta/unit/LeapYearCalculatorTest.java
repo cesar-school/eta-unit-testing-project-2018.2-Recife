@@ -55,3 +55,4 @@ public class LeapYearCalculatorTest {
         assertTrue(leapYearCalculator.isCurrentYearLeapYear());
     }
 }
+
