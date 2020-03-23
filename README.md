@@ -1,3 +1,6 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rods7on_unit-testing-project&metric=alert_status)](https://sonarcloud.io/dashboard?id=rods7on_unit-testing-project)
+
+
 # Testes Unitários (Projeto)
 
 Projeto da disciplina de Testes Unitários da Especialização em Testes Ágeis, turma
