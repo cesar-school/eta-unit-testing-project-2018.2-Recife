@@ -10,20 +10,17 @@
     <url>http://www.your.site.com/</url>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
-<!--        <dependency>-->
-<!--            <groupId>org.sonarsource.scanner.maven</groupId>-->
-<!--            <artifactId>sonar-maven-plugin</artifactId>-->
-<!--            <version>3.7.0.1746</version>-->
-<!--        </dependency>-->
-
+        <dependency>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.7.0.1746</version>
+        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>5.6.0</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
@@ -36,14 +33,11 @@
             <version>3.3.0</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.codehaus.sonar/sonar-maven-plugin -->
         <dependency>
             <groupId>org.codehaus.sonar</groupId>
             <artifactId>sonar-maven-plugin</artifactId>
             <version>4.0</version>
         </dependency>
-
     </dependencies>
 
     <properties>
