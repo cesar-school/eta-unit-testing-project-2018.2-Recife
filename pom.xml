@@ -7,7 +7,6 @@
     <groupId>school.cesar.eta</groupId>
     <artifactId>unit-testing-project</artifactId>
     <version>2018.2</version>
-    <url>http://www.your.site.com/</url>
 
     <dependencies>
         <dependency>
