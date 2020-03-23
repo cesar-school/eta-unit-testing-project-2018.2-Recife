@@ -1,6 +1,4 @@
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rods7on_unit-testing-project&metric=alert_status)](https://sonarcloud.io/dashboard?id=rods7on_unit-testing-project)
-
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=rods7on_unit-testing-project&metric=coverage)](https://sonarcloud.io/dashboard?id=rods7on_unit-testing-project)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rods7on_unit-testing-project&metric=alert_status)](https://sonarcloud.io/dashboard?id=rods7on_unit-testing-project)[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=rods7on_unit-testing-project&metric=coverage)](https://sonarcloud.io/dashboard?id=rods7on_unit-testing-project)
 
 
 
