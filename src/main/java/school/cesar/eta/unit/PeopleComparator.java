@@ -60,3 +60,4 @@ public class PeopleComparator {
         return firstPerson.getState().equals(secondPerson.getState());
     }
 }
+
