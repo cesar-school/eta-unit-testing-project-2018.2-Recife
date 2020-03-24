@@ -1,4 +1,5 @@
 # Testes Unitários (Projeto)
+![Java CI](https://github.com/urblopes/unit-testing-project/workflows/Java%20CI/badge.svg)
 
 Projeto da disciplina de Testes Unitários da Especialização em Testes Ágeis, turma
 2018.2.
