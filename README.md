@@ -1,8 +1,8 @@
-![Java CI](https://github.com/franciscofnneto/unit-testing-project/workflows/Java%20CI/badge.svg)
+![Java CI](https://github.com/thiago-git-curso/unit-testing-project/workflows/Java%20CI/badge.svg)
 ![SonarCloud Status](https://sonarcloud.io/api/project_badges/measure?project=unit-testing-project&metric=alert_status)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=unit-testing-project&metric=ncloc)](https://sonarcloud.io/dashboard?id=franciscofnneto_unit-testing-project)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=_unit-testing-project&metric=coverage)](https://sonarcloud.io/dashboard?id=franciscofnneto_unit-testing-project)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=unit-testing-project&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=franciscofnneto_unit-testing-project)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=unit-testing-project&metric=ncloc)](https://sonarcloud.io/dashboard?id=unit-testing-project)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=_unit-testing-project&metric=coverage)](https://sonarcloud.io/dashboard?id=unit-testing-project)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=unit-testing-project&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=unit-testing-project)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=unit-testing-project&metric=bugs)](https://sonarcloud.io/dashboard?id=unit-testing-project)
 
 
