@@ -32,3 +32,7 @@ Fará juz ao ponto exta o aluno que:
 e reportar a cobertura numa instância do SonarCloud.
 - **0.5 pontos extra**: Utilizar a dependência do Mockito para criação de
 dublês de teste, quando houver a necessidade.
+
+![Java CI](https://github.com/lazarofsjunior/unit-testing-project/workflows/Java%20CI/badge.svg)
+![SonarCloud Status](https://sonarcloud.io/api/project_badges/measure?project=lazarofsjunior_unit-testing-project-1&metric=alert_status)
+![SonarCloud Coverage](https://sonarcloud.io/api/project_badges/measure?project=lazarofsjunior_unit-testing-project-1&metric=coverage)
