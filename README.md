@@ -1,9 +1,9 @@
 ![Java CI](https://github.com/thiago-git-curso/unit-testing-project/workflows/Java%20CI/badge.svg)
 ![SonarCloud Status](https://sonarcloud.io/api/project_badges/measure?project=thiago-git-curso_unit-testing-project&metric=alert_status)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=thiago-git-curso_unit-testing-project&metric=ncloc)](https://sonarcloud.io/dashboard?id=unit-testing-project)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=thiago-git-curso_unit-testing-project&metric=ncloc)](https://sonarcloud.io/dashboard?id=thiago-git-curso_unit-testing-project)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=thiago-git-curso_unit-testing-project&metric=coverage)](https://sonarcloud.io/dashboard?id=thiago-git-curso_unit-testing-project)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=thiago-git-curso_unit-testing-project&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=thiago-git-curso_unit-testing-project)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=thiago-git-curso_unit-testing-project&metric=bugs)](https://sonarcloud.io/dashboard?id=unit-testing-project)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=thiago-git-curso_unit-testing-project&metric=bugs)](https://sonarcloud.io/dashboard?id=thiago-git-curso_unit-testing-project)
 
 
 # Testes Unitários (Projeto)
