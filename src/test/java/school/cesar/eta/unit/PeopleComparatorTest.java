@@ -4,13 +4,13 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import school.cesar.eta.unit.entity.Person;
-import school.cesar.eta.unit.utils.PersonBuilder;
+import school.cesar.eta.unit.utils.PersonBuilderTest;
 import java.time.LocalDate;
 import java.time.Month;
 
 public class PeopleComparatorTest {
 
-    PersonBuilder personBuilder;
+    PersonBuilderTest personBuilder;
     PeopleComparator personComparator;
     LocalDate now = LocalDate.now();
 
@@ -22,7 +22,7 @@ public class PeopleComparatorTest {
                 return now;
             }
         };
-        personBuilder = new PersonBuilder();
+        personBuilder = new PersonBuilderTest();
     }
 
     @Test

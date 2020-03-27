@@ -4,7 +4,7 @@ import school.cesar.eta.unit.entity.Person;
 
 import java.time.LocalDate;
 
-public class PersonBuilder {
+public class PersonBuilderTest {
     private String name = "Thiago";
     private String lastName = "Ferreira";
     private LocalDate birthday = LocalDate.now();
@@ -12,32 +12,32 @@ public class PersonBuilder {
     private String city = "Recife";
     private String state = "PE";
 
-    public PersonBuilder setName(String name) {
+    public PersonBuilderTest setName(String name) {
         this.name = name;
         return this;
     }
 
-    public PersonBuilder setLastName(String lastName) {
+    public PersonBuilderTest setLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
 
-    public PersonBuilder setBirthday(LocalDate birthday) {
+    public PersonBuilderTest setBirthday(LocalDate birthday) {
         this.birthday = birthday;
         return this;
     }
 
-    public PersonBuilder setMaritalStatus(String maritalStatus) {
+    public PersonBuilderTest setMaritalStatus(String maritalStatus) {
         this.maritalStatus = maritalStatus;
         return this;
     }
 
-    public PersonBuilder setCity(String city) {
+    public PersonBuilderTest setCity(String city) {
         this.city = city;
         return this;
     }
 
-    public PersonBuilder setState(String state) {
+    public PersonBuilderTest setState(String state) {
         this.state = state;
         return this;
     }
