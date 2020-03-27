@@ -5,6 +5,9 @@
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=franciscofnneto_unit-testing-project&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=franciscofnneto_unit-testing-project)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=franciscofnneto_unit-testing-project&metric=bugs)](https://sonarcloud.io/dashboard?id=franciscofnneto_unit-testing-project)
 
+## Link Sonar
+https://sonarcloud.io/dashboard?id=franciscofnneto_unit-testing-project
+
 # Testes Unitários (Projeto)
 
 Projeto da disciplina de Testes Unitários da Especialização em Testes Ágeis, turma
