@@ -3,7 +3,6 @@ package school.cesar.eta.unit;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import sun.awt.geom.AreaOp;
 
 import java.time.Year;
 
@@ -34,7 +33,6 @@ public class LeapYearCalculatorTest {
         Assertions.assertEquals(Year.now().getValue(), new LeapYearCalculator().getCurrentYear());
 //        System.out.println(Year.now());
     }
-
 
     //Anos normais
     @Test
