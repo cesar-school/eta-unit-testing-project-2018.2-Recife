@@ -33,7 +33,7 @@ public class LeapYearCalculatorTest {
 
     @Test
     public void isLeapYear_forNumberDivisibleByFour_true(){
-        currentYear = 2012;
+        currentYear = 2020;
         assertTrue(leapYearCalculator.isCurrentYearLeapYear());
     }
 

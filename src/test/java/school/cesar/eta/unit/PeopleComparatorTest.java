@@ -7,21 +7,33 @@ import school.cesar.eta.unit.entity.Person;
 
 import java.time.LocalDate;
 
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 public class PeopleComparatorTest {
 
     @Test
     public void isTodayPersonsBirthDayTrue(){
         Person p = new Person();
-        //p.setName("fulana");
-       //p.setLastName("de tal");
-        p.setBirthday(LocalDate.now());
+         p.setBirthday(LocalDate.now());
 
         PeopleComparator pc = new PeopleComparator();
         boolean TodayPersonsBirthDay = pc.isTodayPersonsBirthDay(p);
-
         assertTrue(TodayPersonsBirthDay);
     }
+
+    @Test
+    public void isTodayPersonsBirthDayFalse(){
+        Person p = new Person();
+        p.setBirthday(LocalDate.of(2020,02,22));
+
+        PeopleComparator PeopleComparator = new PeopleComparator();
+        boolean TodayPersonBirthDayFalse = PeopleComparator.isTodayPersonsBirthDay(p);
+
+        assertFalse(TodayPersonBirthDayFalse);
+
+    }
+
+
+
 
 }
