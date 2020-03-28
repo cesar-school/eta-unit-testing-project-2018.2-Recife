@@ -82,5 +82,4 @@ public class PeopleComparatorTest {
         Person pessoa = personas.addAniversario(agora.parse("2020-01-13")).basePessoa();
         Assertions.assertFalse(peopleComparator.isTodayPersonsBirthDay(pessoa));
     }
-
 }
