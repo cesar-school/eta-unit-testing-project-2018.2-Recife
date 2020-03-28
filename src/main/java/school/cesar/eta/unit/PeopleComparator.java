@@ -21,7 +21,7 @@ public class PeopleComparator {
         }
 
         return !leapYearCalculator.isCurrentYearLeapYear()
-                && now.getDayOfMonth() == 1 && now.getMonth() == Month.MARCH
+               // && now.getDayOfMonth() == 1 && now.getMonth() == Month.MARCH
                 && birthday.getDayOfMonth() == 29 && birthday.getMonth() == Month.FEBRUARY;
     }
 
