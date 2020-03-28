@@ -40,4 +40,6 @@ dublês de teste, quando houver a necessidade.
 ![SonarCloud bugs](https://sonarcloud.io/api/project_badges/measure?project=lazarofsjunior_unit-testing-project&metric=bugs)
 ![SonarCloud Duplicated](https://sonarcloud.io/api/project_badges/measure?project=lazarofsjunior_unit-testing-project&metric=duplicated_lines_density)
 ![SonarCloud Security](https://sonarcloud.io/api/project_badges/measure?project=lazarofsjunior_unit-testing-project&metric=security_rating)
+![SonarCloud Sqale](https://sonarcloud.io/api/project_badges/measure?project=lazarofsjunior_unit-testing-project&metric=sqale_index)
+![SonarCloud Reliability](https://sonarcloud.io/api/project_badges/measure?project=lazarofsjunior_unit-testing-project&metric=reliability_rating)
 
