@@ -28,8 +28,8 @@ public class PeopleComparatorTest {
     //Retornos verdadeiros
     @Test
     public void aniversarioHoje(){
-        Person person = personas.addAniversario(agora).basePessoa();
-        Assertions.assertTrue(peopleComparator.isTodayPersonsBirthDay(person));
+        Person pessoa = personas.addAniversario(agora).basePessoa();
+        Assertions.assertTrue(peopleComparator.isTodayPersonsBirthDay(pessoa));
     }
 
     @Test
