@@ -45,3 +45,6 @@ dublês de teste, quando houver a necessidade.
 ![SonarCloud ncloc](https://sonarcloud.io/api/project_badges/measure?project=lazarofsjunior_unit-testing-project&metric=ncloc)
 
 
+![SonarCloud Project](https://sonarcloud.io/api/project_badges/measure?project=lazarofsjunior_unit-testing-project&project=unit-testing-project)
+
+
