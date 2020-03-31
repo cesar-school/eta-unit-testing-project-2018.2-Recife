@@ -6,13 +6,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import java.time.LocalDate;
-
 import org.mockito.junit.jupiter.MockitoExtension;
 import school.cesar.eta.unit.PeopleComparator;
 import school.cesar.eta.unit.entity.Person;
-import static org.mockito.Mockito.when;
-import java.time.LocalDate;
-import java.time.Year;
 
 @ExtendWith(MockitoExtension.class)
 public class PeopleComparatorMockTest {
