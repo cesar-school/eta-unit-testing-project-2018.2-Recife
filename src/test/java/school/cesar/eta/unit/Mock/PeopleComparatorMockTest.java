@@ -15,7 +15,7 @@ import java.time.LocalDate;
 import java.time.Year;
 
 @ExtendWith(MockitoExtension.class)
-public class  PeopleComparatorTestMock {
+public class PeopleComparatorMockTest {
     @InjectMocks
     PeopleComparator application;
     @Mock
