@@ -73,6 +73,26 @@ public class  PeopleComparatorTest {
         dummySecond.setBirthday(LocalDate.of(1980,05,29));
         Assertions.assertTrue(application.isSamePerson(dummy,dummySecond));
     }
+
+    @Test
+    public void compare_isSamePersonTESTEEEEEE_false() {
+        Person dummy = new Person();
+        Person dummySecond = new Person();
+        dummy.setName("Alessandro");
+        dummy.setLastName("Meireles");
+        dummy.setState("Pernambuco");
+        dummy.setCity("Recife");
+        dummy.setMaritalStatus("Casado");
+        dummy.setBirthday(LocalDate.of(1980,05,29));
+        dummySecond.setName("Alessandro");
+        dummySecond.setLastName("Meireles");
+        dummySecond.setState("Pernambuco");
+        dummySecond.setCity("teste");
+        dummySecond.setMaritalStatus("Casado");
+        dummySecond.setBirthday(LocalDate.of(1980,05,29));
+        Assertions.assertFalse(application.isSamePerson(dummy,dummySecond));
+    }
+
     @Test
     public void compare_isSameFamilyErroButSamePerson_false() {
         Person dummy = new Person();
@@ -106,7 +126,7 @@ public class  PeopleComparatorTest {
         dummySecond.setLastName("Meireles");
         dummySecond.setState("Pernambuco");
         dummySecond.setCity("Recife");
-        dummySecond.setMaritalStatus("Casado");
+        dummySecond.setMaritalStatus("Solteiro");
         dummySecond.setBirthday(LocalDate.of(1983,04,25));
         Assertions.assertTrue(application.isSameFamily(dummy,dummySecond));
     }
@@ -168,6 +188,8 @@ public class  PeopleComparatorTest {
         dummySecond.setBirthday(LocalDate.of(1983,04,25));
         Assertions.assertFalse(application.isSameFamily(dummy,dummySecond));
     }
+
+
 
 
 
