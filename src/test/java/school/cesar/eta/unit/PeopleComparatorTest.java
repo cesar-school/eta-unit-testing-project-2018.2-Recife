@@ -55,8 +55,28 @@ public class  PeopleComparatorTest {
         dummySecond.setCity("Recife");
         Assertions.assertFalse(application.isSamePerson(dummy,dummySecond));
     }
+
     @Test
-    public void compare_isSamePerson_true() {
+    public void compare_isNotSamePersonButOtherLastName_false () {
+        Person dummy = new Person();
+        Person dummySecond = new Person();
+        dummy.setName("Alessandro");
+        dummy.setLastName("Meireles");
+        dummy.setState("Pernambuco");
+        dummy.setCity("Recife");
+        dummy.setMaritalStatus("Casado");
+        dummy.setBirthday(LocalDate.of(1980,05,29));
+        dummySecond.setName("Alessandro");
+        dummySecond.setLastName("Sales");
+        dummySecond.setState("Pernambuco");
+        dummySecond.setCity("Recife");
+        dummySecond.setMaritalStatus("Casado");
+        dummySecond.setBirthday(LocalDate.of(1980,05,29));
+        Assertions.assertFalse(application.isSamePerson(dummy,dummySecond));
+    }
+
+    @Test
+    public void compare_isNotSamePersonButOtherBirthday_false () {
         Person dummy = new Person();
         Person dummySecond = new Person();
         dummy.setName("Alessandro");
@@ -70,12 +90,13 @@ public class  PeopleComparatorTest {
         dummySecond.setState("Pernambuco");
         dummySecond.setCity("Recife");
         dummySecond.setMaritalStatus("Casado");
-        dummySecond.setBirthday(LocalDate.of(1980,05,29));
-        Assertions.assertTrue(application.isSamePerson(dummy,dummySecond));
+        dummySecond.setBirthday(LocalDate.of(1978,05,29));
+        Assertions.assertFalse(application.isSamePerson(dummy,dummySecond));
     }
 
+
     @Test
-    public void compare_isSamePersonTESTEEEEEE_false() {
+    public void compare_isNotSamePersonButOtherMarital_false () {
         Person dummy = new Person();
         Person dummySecond = new Person();
         dummy.setName("Alessandro");
@@ -87,11 +108,51 @@ public class  PeopleComparatorTest {
         dummySecond.setName("Alessandro");
         dummySecond.setLastName("Meireles");
         dummySecond.setState("Pernambuco");
-        dummySecond.setCity("teste");
+        dummySecond.setCity("Recife");
+        dummySecond.setMaritalStatus("Solteiro");
+        dummySecond.setBirthday(LocalDate.of(1980,05,29));
+        Assertions.assertFalse(application.isSamePerson(dummy,dummySecond));
+    }
+
+    @Test
+    public void compare_isNotSamePersonButOtherState_false () {
+        Person dummy = new Person();
+        Person dummySecond = new Person();
+        dummy.setName("Alessandro");
+        dummy.setLastName("Meireles");
+        dummy.setState("Pernambuco");
+        dummy.setCity("Recife");
+        dummy.setMaritalStatus("Casado");
+        dummy.setBirthday(LocalDate.of(1980,05,29));
+        dummySecond.setName("Alessandro");
+        dummySecond.setLastName("Meireles");
+        dummySecond.setState("Alagoas");
+        dummySecond.setCity("Recife");
         dummySecond.setMaritalStatus("Casado");
         dummySecond.setBirthday(LocalDate.of(1980,05,29));
         Assertions.assertFalse(application.isSamePerson(dummy,dummySecond));
     }
+
+    @Test
+    public void compare_isNotSamePersonButOtherCity_false () {
+        Person dummy = new Person();
+        Person dummySecond = new Person();
+        dummy.setName("Alessandro");
+        dummy.setLastName("Meireles");
+        dummy.setState("Pernambuco");
+        dummy.setCity("Recife");
+        dummy.setMaritalStatus("Casado");
+        dummy.setBirthday(LocalDate.of(1980,05,29));
+        dummySecond.setName("Alessandro");
+        dummySecond.setLastName("Meireles");
+        dummySecond.setState("Pernambuco");
+        dummySecond.setCity("Olinda");
+        dummySecond.setMaritalStatus("Casado");
+        dummySecond.setBirthday(LocalDate.of(1980,05,29));
+        Assertions.assertFalse(application.isSamePerson(dummy,dummySecond));
+    }
+
+
 
     @Test
     public void compare_isSameFamilyErroButSamePerson_false() {
@@ -188,9 +249,6 @@ public class  PeopleComparatorTest {
         dummySecond.setBirthday(LocalDate.of(1983,04,25));
         Assertions.assertFalse(application.isSameFamily(dummy,dummySecond));
     }
-
-
-
 
 
 }
