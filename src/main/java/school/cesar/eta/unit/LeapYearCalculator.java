@@ -17,6 +17,7 @@ public class LeapYearCalculator {
      *
      * src: https://en.wikipedia.org/wiki/Leap_year#Algorithm
      */
+
     public boolean isCurrentYearLeapYear() {
         final int year = getCurrentYear();
         if(year % 4 != 0) {
