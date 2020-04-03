@@ -1,12 +1,28 @@
 package school.cesar.eta.unit;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.Year;
 
 
 public class LeapYearCalculatorTest {
+
+    public Integer currentYear;
+    public LeapYearCalculator leapYearCalculator;
+
+    @BeforeEach
+    public void setUp() {
+        currentYear = null;
+        leapYearCalculator = new LeapYearCalculator() {
+            @Override
+            public int getCurrentYear() {
+                return currentYear;
+            }
+        };
+    }
+
 
     @Test
     public void isLeapYear_currentYearIsLeapYear(){
@@ -72,4 +88,16 @@ public class LeapYearCalculatorTest {
     }
 
 
-}
+
+
+
+    @Test
+        public void year_NotDivisibleByFour_LeapYearFalse () {
+            currentYear = 2001;
+            Assertions.assertFalse(leapYearCalculator.isCurrentYearLeapYear());
+        }
+
+
+    }
+
+
