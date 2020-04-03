@@ -6,6 +6,16 @@
   <artifactId>unit-testing-project</artifactId>
   <version>2018.2</version>
 
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+
+    <sonar.projectKey>clcduque_unit-testing-project</sonar.projectKey>
+    <sonar.organization>clcduque</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
