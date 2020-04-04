@@ -9,34 +9,22 @@ import java.time.Year;
 
 public class LeapYearCalculatorTest {
 
-    public Integer currentYear;
-    public LeapYearCalculator leapYearCalculator;
 
-    @BeforeEach
-    public void setUp() {
-        currentYear = null;
-        leapYearCalculator = new LeapYearCalculator() {
-            @Override
-            public int getCurrentYear() {
-                return currentYear;
-            }
-        };
-    }
 
 
     @Test
-    public void isLeapYear_currentYearIsLeapYear(){
+    public void isLeapYear_currentYearIsLeapYear() {
         LeapYearCalculator calculator = new LeapYearCalculator();
         Assertions.assertTrue(calculator.isCurrentYearLeapYear());
 
     }
 
     @Test
-    public void isLeapYear (){
-        LeapYearCalculator calculator = new LeapYearCalculator(){
+    public void isLeapYear() {
+        LeapYearCalculator calculator = new LeapYearCalculator() {
 
             @Override
-            public int getCurrentYear(){
+            public int getCurrentYear() {
                 return 2124;
             }
 
@@ -46,11 +34,11 @@ public class LeapYearCalculatorTest {
     }
 
     @Test
-    public void isCommonYear (){
-        LeapYearCalculator calculator = new LeapYearCalculator(){
+    public void isCommonYear() {
+        LeapYearCalculator calculator = new LeapYearCalculator() {
 
             @Override
-            public int getCurrentYear(){
+            public int getCurrentYear() {
                 return 2019;
             }
 
@@ -60,11 +48,11 @@ public class LeapYearCalculatorTest {
     }
 
     @Test
-    public void isLeapYear_yearIsDividedByFour (){
-        LeapYearCalculator calculator = new LeapYearCalculator(){
+    public void isLeapYear_yearIsDivisibleByFour_LeapYearTrue() {
+        LeapYearCalculator calculator = new LeapYearCalculator() {
 
             @Override
-            public int getCurrentYear(){
+            public int getCurrentYear() {
                 return 1980;
             }
 
@@ -74,12 +62,26 @@ public class LeapYearCalculatorTest {
     }
 
     @Test
-    public void isLeapYear_yearNotDividedByOneHundredAndDividedByFourHundred (){
-        LeapYearCalculator calculator = new LeapYearCalculator(){
+    public void isLeapYear_yearNotIsDivisibleByFour_LeapYearFalse() {
+        LeapYearCalculator calculator = new LeapYearCalculator() {
 
             @Override
-            public int getCurrentYear(){
-                return 1600;
+            public int getCurrentYear() {
+                return 1983;
+            }
+
+        };
+        Assertions.assertFalse(calculator.isCurrentYearLeapYear());
+
+    }
+
+    @Test
+    public void isLeapYear_yearIsDivisibleByFourButNotDivisibleByOneHundred_LeapYearTrue() {
+        LeapYearCalculator calculator = new LeapYearCalculator() {
+
+            @Override
+            public int getCurrentYear() {
+                return 1964;
             }
 
         };
@@ -90,14 +92,35 @@ public class LeapYearCalculatorTest {
 
 
 
-
     @Test
-        public void year_NotDivisibleByFour_LeapYearFalse () {
-            currentYear = 2001;
-            Assertions.assertFalse(leapYearCalculator.isCurrentYearLeapYear());
-        }
+    public void isLeapYear_yearNotDividedByOneHundredAndDividedByFourHundred() {
+        LeapYearCalculator calculator = new LeapYearCalculator() {
 
+            @Override
+            public int getCurrentYear() {
+                return 1600;
+            }
+
+        };
+        Assertions.assertTrue(calculator.isCurrentYearLeapYear());
 
     }
 
+
+    @Test
+    public void isLeapYear_yearIsDivisibleByFourByOneHundredAndByFourHundred_LeapYearTrue() {
+        LeapYearCalculator calculator = new LeapYearCalculator() {
+
+            @Override
+            public int getCurrentYear() {
+                return 2000;
+            }
+
+        };
+        Assertions.assertTrue(calculator.isCurrentYearLeapYear());
+
+    }
+
+
+}
 
