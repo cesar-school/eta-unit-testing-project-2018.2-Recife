@@ -36,7 +36,8 @@ public class PeopleComparatorTest {
     @Test
     public void isSamePersonTrue(){
         PeopleComparator comparator = new PeopleComparator();
-        Assertions.assertEquals(true, comparator.isSamePerson(person, person));
+        Person secondPerson = new Person.Builder().name("Vitor").lastName("Lima").birthday(LocalDate.parse("03/13/1995", formatter)).maritalStatus("single").city("Recife").state("Pernambuco").build();
+        Assertions.assertEquals(true, comparator.isSamePerson(person, secondPerson));
     }
 
     @Test
