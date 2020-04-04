@@ -89,6 +89,19 @@ public class LeapYearCalculatorTest {
 
     }
 
+    @Test
+    public void isLeapYear_yearIsDivisibleByFourAndFourHundred_LeapYearTrue() {
+        LeapYearCalculator calculator = new LeapYearCalculator() {
+
+            @Override
+            public int getCurrentYear() {
+                return 800;
+            }
+
+        };
+        Assertions.assertTrue(calculator.isCurrentYearLeapYear());
+
+    }
 
 
 
@@ -120,6 +133,8 @@ public class LeapYearCalculatorTest {
         Assertions.assertTrue(calculator.isCurrentYearLeapYear());
 
     }
+
+
 
 
 }
