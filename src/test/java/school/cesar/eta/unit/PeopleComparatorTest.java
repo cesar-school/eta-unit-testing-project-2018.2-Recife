@@ -136,4 +136,10 @@ public class PeopleComparatorTest {
         Assertions.assertEquals(false, comparator.isSameFamily(person, secondPerson));
     }
 
+    @Test
+    public void twoPeople_SameObjectInstance_throws () {
+       PeopleComparator comparator = new PeopleComparator();
+       Assertions.assertThrows(RuntimeException.class, () -> comparator.isSamePerson(person, person ));
+    }
+
 }
