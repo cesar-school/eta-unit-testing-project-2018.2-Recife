@@ -61,8 +61,6 @@ public class PeopleComparatorTest {
 
     }
 
-
-
     @Test
     public void isBirthYearALeapYearFalse() {
         PeopleComparator comparator = new PeopleComparator() {

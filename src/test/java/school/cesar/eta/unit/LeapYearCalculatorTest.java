@@ -106,7 +106,7 @@ public class LeapYearCalculatorTest {
 
 
     @Test
-    public void isLeapYear_yearNotDividedByOneHundredAndDividedByFourHundred() {
+    public void isLeapYear_yearNotDividedByOneHundredAndDividedByFourHundred_LeapYearTrue() {
         LeapYearCalculator calculator = new LeapYearCalculator() {
 
             @Override
@@ -126,7 +126,7 @@ public class LeapYearCalculatorTest {
 
             @Override
             public int getCurrentYear() {
-                return 2000;
+                return 400;
             }
 
         };
