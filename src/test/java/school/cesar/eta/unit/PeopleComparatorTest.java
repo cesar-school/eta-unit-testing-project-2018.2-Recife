@@ -54,12 +54,23 @@ public class PeopleComparatorTest {
     }
 
     @Test
-    public void isTodaysPersonBirthDayTrue(){
+        public void isTodaysPersonBirthDayTrue(){
+            PeopleComparator comparator = new PeopleComparator();
+            Person secondPerson = new Person.Builder().name("Vitor").lastName("Matos").birthday(comparator.getCurrentDate()).maritalStatus("single").city("Olinda").state("Pernambuco").build();
+            Assertions.assertEquals(true, comparator.isTodayPersonsBirthDay (secondPerson));
+
+    }
+
+
+    @Test
+    public void isSecondPersonSameBirthDayTrue(){
         PeopleComparator comparator = new PeopleComparator();
-        Person secondPerson = new Person.Builder().name("Vitor").lastName("Matos").birthday(comparator.getCurrentDate()).maritalStatus("single").city("Olinda").state("Pernambuco").build();
+        Person secondPerson = new Person.Builder().name("Juan").lastName("Carlos").birthday(LocalDate.parse("04/04/1980", formatter)).maritalStatus("single").city("Caruaru").state("Pernambuco").build();
         Assertions.assertEquals(true, comparator.isTodayPersonsBirthDay (secondPerson));
 
     }
+
+
 
     @Test
     public void isBirthYearALeapYearFalse() {
