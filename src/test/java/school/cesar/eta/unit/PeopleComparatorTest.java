@@ -62,20 +62,18 @@ public class PeopleComparatorTest {
     }
 
 
-    @Test
-    public void isSecondPersonSameBirthDayTrue(){
-        PeopleComparator comparator = new PeopleComparator();
-        Person secondPerson = new Person.Builder().name("Juan").lastName("Carlos").birthday(LocalDate.parse("04/04/1980", formatter)).maritalStatus("single").city("Caruaru").state("Pernambuco").build();
-        Assertions.assertEquals(true, comparator.isTodayPersonsBirthDay (secondPerson));
-
-    }
-
-
 
     @Test
     public void isBirthYearALeapYearFalse() {
-        PeopleComparator comparator = new PeopleComparator();
-        Person secondPerson = new Person.Builder().name("Vitor").lastName("Mendes").birthday(LocalDate.parse("03/13/2019", formatter)).maritalStatus("single").city("Olinda").state("Pernambuco").build();
+        PeopleComparator comparator = new PeopleComparator() {
+           @Override
+           public LocalDate getCurrentDate (){
+               LocalDate localDate = LocalDate.of(2019, 03, 01);
+               return localDate;
+           }
+
+        };
+        Person secondPerson = new Person.Builder().name("Vitor").lastName("Mendes").birthday(LocalDate.parse("02/29/2019", formatter)).maritalStatus("single").city("Olinda").state("Pernambuco").build();
         Assertions.assertEquals(false, comparator.isTodayPersonsBirthDay(secondPerson));
     }
 
