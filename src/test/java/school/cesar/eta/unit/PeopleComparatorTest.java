@@ -1,51 +1,41 @@
 package school.cesar.eta.unit;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
-import org.testng.Assert;
-import org.testng.annotations.Ignore;
+import org.junit.jupiter.api.Test;
 import school.cesar.eta.unit.entity.Person;
 
-import java.time.Clock;
+
+
 import java.time.LocalDate;
-import static org.testng.Assert.*;
 
 
 public class PeopleComparatorTest {
 
     PeopleComparator peopleComparator;
-    PersonCreator personCreator;
+    Person createPerson;
     LocalDate now = LocalDate.now();
 
-
     @BeforeEach
-    public void Setup(){
+    public void setup(){
         peopleComparator = new PeopleComparator() {
             @Override
             public LocalDate getCurrentDate(){
                 return now;
+
             }
         };
-        personCreator = new PersonCreator();
+        createPerson = new Person ();
     }
 
 
     @Test
-    public void isPersonsBirthDay_true(){
-        Person person = personCreator.setBirthday(now).createPerson();
+    public void isTodayPersonsBirthDay_True(){
+        Person person = createPerson.setBirthday(now).CreatePerson();
         Assertions.assertTrue(peopleComparator.isTodayPersonsBirthDay(person));
-
     }
 
-    @Test
-    public void isTodayPersonsBirthDay_False() {
-        Person p = new Person();
-        p.setBirthday(now.minusDays(5))
 
-        Assertions.assertTrue(PeopleComparator.isTodayPersonsBirthDay(p));
-
-    }
 
 }
 
