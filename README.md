@@ -10,9 +10,12 @@ unitários para as classes:
 - LeapYearCalculator
 - PeopleComparator
 
+Quando estiver pronto abrir um pull request com os testes para o projeto original.
+
 ## Avaliação
 
  Cada teste unitário será avaliado quanto aos seguintes critérios:
+- Caminhos cobertos
 - Qualidade dos testes:
     - Isolamento
     - Nomenclatura do teste
