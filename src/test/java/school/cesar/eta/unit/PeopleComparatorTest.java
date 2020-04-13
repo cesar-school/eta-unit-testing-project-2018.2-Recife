@@ -56,11 +56,68 @@ public class PeopleComparatorTest {
         Assertions.assertFalse(peopleComparator.isTodayPersonsBirthDay(pessoa));
     }
 
+    //isSameFamily (testes)
+    @Test
+    public void pessoasMesmaFamiliaComNomesIguais(){
+        Person pessoa1 = personasBuider.basePessoa();
+        Person pessoa2 = personasBuider.basePessoa();
+        Assertions.assertTrue(peopleComparator.isSameFamily(pessoa1, pessoa2));
+    }
+
+    @Test
+    public void pessoasMesmaFamiliaComNomesDiferentes(){
+        Person pessoa1 = personasBuider.basePessoa();
+        Person pessoa2 = personasBuider.addNome("Lalleska").basePessoa();
+        Assertions.assertFalse(peopleComparator.isSameFamily(pessoa1, pessoa2));
+    }
+
+    @Test
+    public void pessoasComMesmoSobrenomeFamiliar(){
+        Person pessoa1 = personasBuider.basePessoa();
+        Person pessoa2 = personasBuider.addNome("Lalleska").addSobrenome("Soares").basePessoa();
+        Assertions.assertTrue(peopleComparator.isSameFamily(pessoa1, pessoa2));
+    }
+
+    @Test
+    public void pessoasComSobrenomesDeFamiliaDiferentes(){
+        Person pessoa1 = personasBuider.basePessoa();
+        Person pessoa2 = personasBuider.addNome("Lalleska").addSobrenome("Araujo").basePessoa();
+        Assertions.assertFalse(peopleComparator.isSameFamily(pessoa1, pessoa2));
+    }
+
+    @Test
+    public void pessoasMesmaFamiliaDaMesmaCidade(){
+        Person pessoa1 = personasBuider.basePessoa();
+        Person pessoa2 = personasBuider.addCidade("Recife").basePessoa();
+        Assertions.assertTrue(peopleComparator.isSameFamily(pessoa1, pessoa2));
+    }
+
+    @Test
+    public void pessoasMesmaFamiliaDeCidadesDiferentes(){
+        Person pessoa1 = personasBuider.basePessoa();
+        Person pessoa2 = personasBuider.addCidade("Olinda").basePessoa();
+        Assertions.assertFalse(peopleComparator.isSameFamily(pessoa1, pessoa2));
+    }
+
+    @Test
+    public void pessoasMesmaFamiliaDeMesmoEstado(){
+        Person pessoa1 = personasBuider.basePessoa();
+        Person pessoa2 = personasBuider.addEstado("Pernambuco").basePessoa();
+        Assertions.assertTrue(peopleComparator.isSameFamily(pessoa1, pessoa2));
+    }
+
+    @Test
+    public void pessoasMesmaFamiliaDeEstadoDiferentes(){
+        Person pessoa1 = personasBuider.basePessoa();
+        Person pessoa2 = personasBuider.addEstado("Pernumbuco").basePessoa();
+        Assertions.assertFalse(peopleComparator.isSameFamily(pessoa1, pessoa2));
+    }
+
     //isSamePerson (testes)
     @Test
     public void pessoasComNomesIguais(){
         Person pessoa1 = personasBuider.basePessoa();
-        Person pessoa2 = personasBuider.basePessoa();
+        Person pessoa2 = personasBuider.addNome("Richard").basePessoa();
         Assertions.assertTrue(peopleComparator.isSamePerson(pessoa1, pessoa2));
     }
 
@@ -72,9 +129,37 @@ public class PeopleComparatorTest {
     }
 
     @Test
+    public void pessoasComSobrenomesiguais(){
+        Person pessoa1 = personasBuider.basePessoa();
+        Person pessoa2 = personasBuider.addSobrenome("Soares").basePessoa();
+        Assertions.assertTrue(peopleComparator.isSamePerson(pessoa1, pessoa2));
+    }
+
+    @Test
     public void pessoasComSobrenomesDiferentes(){
         Person pessoa1 = personasBuider.basePessoa();
         Person pessoa2 = personasBuider.addSobrenome("Araujo").basePessoa();
+        Assertions.assertFalse(peopleComparator.isSamePerson(pessoa1, pessoa2));
+    }
+
+    @Test
+    public void dataDeAniversarioIguais(){
+        Person pessoa1 = personasBuider.addAniversario(agora).basePessoa();
+        Person pessoa2 = personasBuider.addAniversario(agora).basePessoa();
+        Assertions.assertTrue(peopleComparator.isSamePerson(pessoa1, pessoa2));
+    }
+
+    @Test
+    public void dataDeAniversarioDiverente(){
+        Person pessoa1 = personasBuider.addAniversario(agora.parse("2020-01-13")).basePessoa();
+        Person pessoa2 = personasBuider.addAniversario(agora).basePessoa();
+        Assertions.assertFalse(peopleComparator.isSamePerson(pessoa1, pessoa2));
+    }
+
+    @Test
+    public void pessoasComMesmoEstadoCivil(){
+        Person pessoa1 = personasBuider.basePessoa();
+        Person pessoa2 = personasBuider.addEstadoCivil("Casado").basePessoa();
         Assertions.assertFalse(peopleComparator.isSamePerson(pessoa1, pessoa2));
     }
 
@@ -100,16 +185,16 @@ public class PeopleComparatorTest {
     }
 
     @Test
-    public void dataDeAniversarioIguais(){
-        Person pessoa1 = personasBuider.addAniversario(agora).basePessoa();
-        Person pessoa2 = personasBuider.addAniversario(agora).basePessoa();
+    public void pessoasDeMesmoEstado(){
+        Person pessoa1 = personasBuider.basePessoa();
+        Person pessoa2 = personasBuider.addEstado("Pernambuco").basePessoa();
         Assertions.assertTrue(peopleComparator.isSamePerson(pessoa1, pessoa2));
     }
 
     @Test
-    public void dataDeAniversarioDiverente(){
-        Person pessoa1 = personasBuider.addAniversario(agora.parse("2020-01-13")).basePessoa();
-        Person pessoa2 = personasBuider.addAniversario(agora).basePessoa();
+    public void pessoasDeEstadoDiferentes(){
+        Person pessoa1 = personasBuider.basePessoa();
+        Person pessoa2 = personasBuider.addEstado("Pernumbuco").basePessoa();
         Assertions.assertFalse(peopleComparator.isSamePerson(pessoa1, pessoa2));
     }
 
@@ -119,19 +204,4 @@ public class PeopleComparatorTest {
         Assertions.assertThrows(RuntimeException.class, () -> peopleComparator.isSamePerson(pessoa, pessoa));
     }
 
-    //isSameFamily (testes)
-    @Test
-    public void pessoasComMesmoSobrenome(){
-        Person pessoa1 = personasBuider.basePessoa();
-        Person pessoa2 = personasBuider.addNome("Lalleska").addSobrenome("Soares").basePessoa();
-        Assertions.assertTrue(peopleComparator.isSameFamily(pessoa1, pessoa2));
-    }
-
-    @Test
-    public void pessoasComMesmoEstadoCivil(){
-        Person pessoa1 = personasBuider.basePessoa();
-        Person pessoa2 = personasBuider.addNome("Lalleska").addSobrenome("Soares")
-                .addEstadoCivil("Casado").basePessoa();
-        Assertions.assertTrue(peopleComparator.isSameFamily(pessoa1, pessoa2));
-    }
 }
