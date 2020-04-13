@@ -1,7 +1,7 @@
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rods7on_unit-testing-project&metric=alert_status)](https://sonarcloud.io/dashboard?id=rods7on_unit-testing-project)  ![Java CI](https://github.com/rods7on/unit-testing-project/workflows/Java%20CI/badge.svg)  [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=rods7on_unit-testing-project&metric=ncloc)](https://sonarcloud.io/dashboard?id=rods7on_unit-testing-project)  [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=rods7on_unit-testing-project&metric=coverage)](https://sonarcloud.io/dashboard?id=rods7on_unit-testing-project)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rods7on_unit-testing-project&metric=alert_status)](https://sonarcloud.io/dashboard?id=rods7on_unit-testing-project)  ![Java CI](https://github.com/rods7on/unit-testing-project/workflows/Java%20CI/badge.svg)  [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=rods7on_unit-testing-project&metric=ncloc)](https://sonarcloud.io/dashboard?id=rods7on_unit-testing-project)  [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=rods7on_unit-testing-project&metric=coverage)](https://sonarcloud.io/dashboard?id=rods7on_unit-testing-project)  [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=rods7on_unit-testing-project&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=rods7on_unit-testing-project)  [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=rods7on_unit-testing-project&metric=security_rating)](https://sonarcloud.io/dashboard?id=rods7on_unit-testing-project)
 
 
-
+https://sonarcloud.io/dashboard?id=rods7on_unit-testing-project
 
 # Testes Unitários (Projeto)
 
