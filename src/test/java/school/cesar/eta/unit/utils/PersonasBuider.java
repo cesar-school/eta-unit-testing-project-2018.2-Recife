@@ -1,11 +1,11 @@
-package school.cesar.eta.unit;
+package school.cesar.eta.unit.utils;
 import school.cesar.eta.unit.entity.Person;
 import java.time.LocalDate;
 
 
 //Classe de apoio (criação da base de dados)
 
-public class Personas {
+public class PersonasBuider {
 
     private String nome = "Richard";
     private String sobrenome = "Soares";
@@ -14,32 +14,32 @@ public class Personas {
     private String estado = "Pernambuco";
     private LocalDate aniversario = LocalDate.now();
 
-    public Personas addNome(String name) {
+    public PersonasBuider addNome(String name) {
         this.nome = name;
         return this;
     }
 
-    public Personas addSobrenome(String lastName) {
+    public PersonasBuider addSobrenome(String lastName) {
         this.sobrenome = lastName;
         return this;
     }
 
-    public Personas addEstadoCivil(String maritalStatus) {
+    public PersonasBuider addEstadoCivil(String maritalStatus) {
         this.estadoCivil = maritalStatus;
         return this;
     }
 
-    public Personas addCidade(String city) {
+    public PersonasBuider addCidade(String city) {
         this.cidade = city;
         return this;
     }
 
-    public Personas addEstado(String state) {
+    public PersonasBuider addEstado(String state) {
         this.estado = state;
         return this;
     }
 
-    public Personas addAniversario(LocalDate birthday) {
+    public PersonasBuider addAniversario(LocalDate birthday) {
         this.aniversario = birthday;
         return this;
     }
