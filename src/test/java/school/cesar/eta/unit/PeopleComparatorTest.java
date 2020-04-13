@@ -28,7 +28,6 @@ public class PeopleComparatorTest {
         personasBuider = new PersonasBuider();
     }
 
-    //Retornos verdadeiros
     @Test
     public void aniversarioHoje(){
         Person pessoa = personasBuider.addAniversario(agora).basePessoa();
@@ -36,10 +35,23 @@ public class PeopleComparatorTest {
     }
 
     @Test
-    public void pessoasIguais(){
+    public void dataDeAniversarioDiferenteDeHoje(){
+        Person pessoa = personasBuider.addAniversario(agora.parse("2020-01-13")).basePessoa();
+        Assertions.assertFalse(peopleComparator.isTodayPersonsBirthDay(pessoa));
+    }
+
+    @Test
+    public void pessoasComNomesIguais(){
         Person pessoa1 = personasBuider.basePessoa();
         Person pessoa2 = personasBuider.basePessoa();
         Assertions.assertTrue(peopleComparator.isSamePerson(pessoa1, pessoa2));
+    }
+
+    @Test
+    public void pessoasComNomesDiferentes(){
+        Person pessoa1 = personasBuider.basePessoa();
+        Person pessoa2 = personasBuider.addNome("Lalleska").basePessoa();
+        Assertions.assertFalse(peopleComparator.isSamePerson(pessoa1, pessoa2));
     }
 
     @Test
@@ -51,11 +63,25 @@ public class PeopleComparatorTest {
     }
 
     @Test
+    public void pessoasComSobrenomesDiferentes(){
+        Person pessoa1 = personasBuider.basePessoa();
+        Person pessoa2 = personasBuider.addSobrenome("Araujo").basePessoa();
+        Assertions.assertFalse(peopleComparator.isSamePerson(pessoa1, pessoa2));
+    }
+
+    @Test
     public void casados(){
         Person pessoa1 = personasBuider.basePessoa();
         Person pessoa2 = personasBuider.addNome("Lalleska").addSobrenome("Soares")
                 .addEstadoCivil("Casado").basePessoa();
         Assertions.assertTrue(peopleComparator.isSameFamily(pessoa1, pessoa2));
+    }
+
+    @Test
+    public void pessoasComEstadoCivilDiferentes(){
+        Person pessoa1 = personasBuider.basePessoa();
+        Person pessoa2 = personasBuider.addEstadoCivil("Solteiro").basePessoa();
+        Assertions.assertFalse(peopleComparator.isSamePerson(pessoa1, pessoa2));
     }
 
     @Test
@@ -65,38 +91,16 @@ public class PeopleComparatorTest {
         Assertions.assertFalse(peopleComparator.isTodayPersonsBirthDay(person));
     }
 
-    //Retornos falsos
     @Test
-    public void pessoasDiferentesNome(){
-        Person pessoa1 = personasBuider.basePessoa();
-        Person pessoa2 = personasBuider.addNome("Lalleska").basePessoa();
-        Assertions.assertFalse(peopleComparator.isSamePerson(pessoa1, pessoa2));
-    }
-
-    @Test
-    public void pessoasDiferentesSobrenome(){
-        Person pessoa1 = personasBuider.basePessoa();
-        Person pessoa2 = personasBuider.addSobrenome("Araujo").basePessoa();
-        Assertions.assertFalse(peopleComparator.isSamePerson(pessoa1, pessoa2));
-    }
-
-    @Test
-    public void pessoasDiferentesEstadoCivil(){
-        Person pessoa1 = personasBuider.basePessoa();
-        Person pessoa2 = personasBuider.addEstadoCivil("Solteiro").basePessoa();
-        Assertions.assertFalse(peopleComparator.isSamePerson(pessoa1, pessoa2));
-    }
-
-    @Test
-    public void dataDeAniversarioDiferente(){
-        Person pessoa = personasBuider.addAniversario(agora.parse("2020-01-13")).basePessoa();
+    public void nascimentoEmAnoNaoBisexto(){
+        LocalDate aniversario = LocalDate.of(2019, Month.FEBRUARY, 19);
+        Person pessoa = personasBuider.addAniversario(aniversario).basePessoa();
         Assertions.assertFalse(peopleComparator.isTodayPersonsBirthDay(pessoa));
     }
 
     @Test
-    public void nascimentoEmAnoNaoBisexto(){
-        LocalDate aniversario = LocalDate.of(2019, Month.FEBRUARY, 19);
-        Person person = personasBuider.addAniversario(aniversario).basePessoa();
-        Assertions.assertFalse(peopleComparator.isTodayPersonsBirthDay(person));
+    public void casoDeExcecao(){
+        Person pessoa = personasBuider.basePessoa();
+        Assertions.assertThrows(RuntimeException.class, () -> peopleComparator.isSamePerson(pessoa, pessoa));
     }
 }
