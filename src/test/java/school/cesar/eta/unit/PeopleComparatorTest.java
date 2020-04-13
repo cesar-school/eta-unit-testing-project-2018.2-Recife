@@ -55,10 +55,9 @@ public class PeopleComparatorTest {
     }
 
     @Test
-    public void mesmaFamilia(){
+    public void pessoasComMesmoSobrenome(){
         Person pessoa1 = personasBuider.basePessoa();
-        Person pessoa2 = personasBuider.addNome("Lalleska").addSobrenome("Soares")
-                .addCidade("Recife").addEstado("Pernambuco").basePessoa();
+        Person pessoa2 = personasBuider.addNome("Lalleska").addSobrenome("Soares").basePessoa();
         Assertions.assertTrue(peopleComparator.isSameFamily(pessoa1, pessoa2));
     }
 
@@ -70,7 +69,7 @@ public class PeopleComparatorTest {
     }
 
     @Test
-    public void casados(){
+    public void pessoasComMesmoEstadoCivil(){
         Person pessoa1 = personasBuider.basePessoa();
         Person pessoa2 = personasBuider.addNome("Lalleska").addSobrenome("Soares")
                 .addEstadoCivil("Casado").basePessoa();
@@ -96,6 +95,20 @@ public class PeopleComparatorTest {
         LocalDate aniversario = LocalDate.of(2019, Month.FEBRUARY, 19);
         Person pessoa = personasBuider.addAniversario(aniversario).basePessoa();
         Assertions.assertFalse(peopleComparator.isTodayPersonsBirthDay(pessoa));
+    }
+
+    @Test
+    public void pessoasDaMesmaCidade(){
+        Person pessoa1 = personasBuider.basePessoa();
+        Person pessoa2 = personasBuider.addCidade("Recife").basePessoa();
+        Assertions.assertTrue(peopleComparator.isSamePerson(pessoa1, pessoa2));
+    }
+
+    @Test
+    public void pessoasDeCidadesDiferentes(){
+        Person pessoa1 = personasBuider.basePessoa();
+        Person pessoa2 = personasBuider.addCidade("Olinda").basePessoa();
+        Assertions.assertFalse(peopleComparator.isSamePerson(pessoa1, pessoa2));
     }
 
     @Test
