@@ -1,4 +1,4 @@
-package school.cesar.eta.unit;
+package school.cesar.eta.unit.utils;
 
 import school.cesar.eta.unit.entity.Person;
 import java.time.LocalDate;
