@@ -26,5 +26,6 @@ public class LeapYearCalculator {
             return true;
         }
         return year % 400 == 0;
+
     }
 }
