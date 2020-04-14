@@ -15,7 +15,7 @@
     <sonar.projectKey>vanessamaartins1_unit-testing-project</sonar.projectKey>
     <sonar.organization>vanessamaartins1</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-    <sonar.login>bcb26a8fe56e748b29e2c22d9a9d0ee0eb1bade4</sonar.login>
+    <sonar.login>f629f348dd05a621213581e6b2e5f461e5a042d6</sonar.login>
   </properties>
 
   <dependencies>
