@@ -11,7 +11,7 @@ public class PersonasBuider {
     private String sobrenome = "Soares";
     private String estadoCivil = "Casado";
     private String cidade = "Recife";
-    private String estado = "Pernambuco";
+    private String estado = "PE";
     private LocalDate aniversario = LocalDate.now();
 
     public PersonasBuider addNome(String name) {
