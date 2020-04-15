@@ -53,7 +53,50 @@ public class PeopleComparatorTest {
         Assertions.assertEquals(false,peopleComparator.isSameFamily(firstPerson, secondPerson));
     }
 
+    @Test
+    public void check_SamePerson_True () {
+        Person firstPerson = personCreator.createPerson();
+        Person secondPerson = personCreator.createPerson();
 
+        System.out.println("Same instance!");
+        Assertions.assertTrue(peopleComparator.isSamePerson(firstPerson,secondPerson));
+
+    }
+    @Test
+    public void check_SamePersonNameSameName_False (){
+    Person firstPerson = personCreator.createPerson();
+    Person secondPerson = personCreator.setName("Aparecida").setLastName("Gomes").createPerson();
+    Assertions.assertFalse(peopleComparator.isSamePerson(firstPerson,secondPerson));
+
+    }
+
+    @Test
+    public void check_SamePersonBirthday_False (){
+        Person firstPerson = personCreator.createPerson();
+        Person secondPerson = personCreator.setBirthday(now.minusDays(30)).createPerson();
+        Assertions.assertFalse(peopleComparator.isSamePerson(firstPerson,secondPerson));
+    }
+
+    @Test
+    public void check_SamePersonMaritinalStatus_False (){
+        Person firstPerson = personCreator.createPerson();
+        Person secondPerson = personCreator.setMaritalStatus("Married").createPerson();
+        Assertions.assertEquals(false,peopleComparator.isSamePerson(firstPerson,secondPerson));
+    }
+
+    @Test
+    public void check_SamePersonCityState_True () {
+        Person firstPerson = personCreator.createPerson();
+        Person secondPerson = personCreator.setCity("Recife").setState("Pernambuco").createPerson();
+        Assertions.assertEquals(true, peopleComparator.isSamePerson(firstPerson,secondPerson));
+    }
+
+    @Test
+    public void check_SamePersonCityState_False () {
+        Person firstPerson = personCreator.createPerson();
+        Person secondPerson = personCreator.setCity("Cabedelo").setState("Paraíba").createPerson();
+        Assertions.assertEquals(false,peopleComparator.isSamePerson(firstPerson,secondPerson));
+    }
 
 }
 
