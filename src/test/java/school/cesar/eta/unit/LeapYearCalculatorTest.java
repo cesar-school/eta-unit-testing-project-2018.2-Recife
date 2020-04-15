@@ -12,7 +12,7 @@ public class LeapYearCalculatorTest {
     private LeapYearCalculator leapYearCalculator;
 
     @BeforeEach
-    public void setUp(){
+    public void configCurrentYear(){
         currentYear = null;
         leapYearCalculator = new LeapYearCalculator() {
             @Override
