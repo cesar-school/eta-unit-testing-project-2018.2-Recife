@@ -62,6 +62,14 @@ public class PeopleComparatorTest {
         Assertions.assertTrue(peopleComparator.isSamePerson(firstPerson,secondPerson));
 
     }
+
+
+    @Test
+    public void check_SamePerson_AllFalse () {
+        Person firstPerson = personCreator.createPerson();
+        Person secondPerson = personCreator.setName("Aparecida").setLastName("Gomes").setCity("Cabedelo").setState("Paraíba").setMaritalStatus("Marrield").createPerson();
+        Assertions.assertEquals(false,peopleComparator.isSamePerson(firstPerson,secondPerson));
+    }
     @Test
     public void check_SamePersonNameSameName_False (){
     Person firstPerson = personCreator.createPerson();
@@ -113,7 +121,5 @@ public class PeopleComparatorTest {
         Assertions.assertEquals(false,peopleComparator.isSamePerson(firstPerson,secondPerson));
     }
 
-
-
-}
+   }
 
