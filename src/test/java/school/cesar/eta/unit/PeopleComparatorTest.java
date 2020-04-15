@@ -48,7 +48,7 @@ public class PeopleComparatorTest {
         Person person = personBuilder
                 .setBirthday(birthday)
                 .builder();
-        assertTrue(peopleComparator.isTodayPersonsBirthDay(person));
+        assertFalse(peopleComparator.isTodayPersonsBirthDay(person));
     }
 
     @Test
