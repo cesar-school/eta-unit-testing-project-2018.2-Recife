@@ -85,6 +85,21 @@ public class PeopleComparatorTest {
     }
 
     @Test
+    public void check_SamePersonCity_True () {
+        Person firstPerson = personCreator.createPerson();
+        Person secondPerson = personCreator.setCity("Recife").createPerson();
+        Assertions.assertTrue(peopleComparator.isSamePerson(firstPerson,secondPerson));
+
+    }
+
+    @Test
+    public void check_SamePersonCity_False () {
+        Person firstPerson = personCreator.createPerson();
+        Person secondPerson = personCreator.setCity("Olinda").createPerson();
+        Assertions.assertFalse(peopleComparator.isSamePerson(firstPerson,secondPerson));
+    }
+
+    @Test
     public void check_SamePersonCityState_True () {
         Person firstPerson = personCreator.createPerson();
         Person secondPerson = personCreator.setCity("Recife").setState("Pernambuco").createPerson();
@@ -97,6 +112,8 @@ public class PeopleComparatorTest {
         Person secondPerson = personCreator.setCity("Cabedelo").setState("Paraíba").createPerson();
         Assertions.assertEquals(false,peopleComparator.isSamePerson(firstPerson,secondPerson));
     }
+
+
 
 }
 
