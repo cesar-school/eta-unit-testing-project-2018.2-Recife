@@ -1,3 +1,12 @@
+# unit-testing
+
+![Java CI](https://github.com/jullyankleya/unit-testing/workflows/Java%20CI/badge.svg)
+![SonarCloud Coverage](https://sonarcloud.io/api/project_badges/measure?project=jullyankleya_cesar-school-unit-testing&metric=coverage)
+
+![SonarCloud Alert Status](https://sonarcloud.io/api/project_badges/measure?project=jullyankleya_cesar-school-unit-testing&metric=alert_status)
+
+
+
 # Testes Unitários (Projeto)
 
 Projeto da disciplina de Testes Unitários da Especialização em Testes Ágeis, turma
