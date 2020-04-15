@@ -29,16 +29,31 @@ public class PeopleComparatorTest {
     }
 
     @Test
-    public void isTodayPersonsBirthDay_True() {
+    public void check_TodayPersonsBirthDay_True() {
         Person person = personCreator.setBirthday(now).createPerson();
         Assertions.assertTrue(peopleComparator.isTodayPersonsBirthDay(person));
     }
 
     @Test
-    public void isTodayPersonsBirthDay_False(){
+    public void check_TodayPersonsBirthDay_False(){
         Person person = personCreator.setBirthday(now.minusDays(57)).createPerson();
         Assertions.assertFalse(peopleComparator.isTodayPersonsBirthDay(person));
     }
+    @Test
+    public void check_SameFamily_True () {
+        Person firstPerson = personCreator.createPerson();
+        Person secondPerson = personCreator.setName("Camilla").setLastName("Negromonte").setCity("Recife").createPerson();
+        Assertions.assertEquals(true,peopleComparator.isSameFamily(firstPerson,secondPerson));
+    }
+
+    @Test
+    public void check_SameFamily_False (){
+        Person firstPerson = personCreator.createPerson();
+        Person secondPerson = personCreator.setName("Aparecida").setLastName("Gomes").setCity("Olinda").createPerson();
+        Assertions.assertEquals(false,peopleComparator.isSameFamily(firstPerson, secondPerson));
+    }
+
+
 
 }
 
