@@ -1,18 +1,17 @@
 package school.cesar.eta.unit;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
+import org.junit.jupiter.api.Assertions;
 import java.time.Year;
 
 public class LeapYearCalculatorTest {
 
-    private Integer currentYear;
-    private LeapYearCalculator leapYearCalculator;
+    public Integer currentYear;
+    public LeapYearCalculator leapYearCalculator;
 
     @BeforeEach
-    public void configCurrentYear(){
+    public void configYear(){
         currentYear = null;
         leapYearCalculator = new LeapYearCalculator() {
             @Override
