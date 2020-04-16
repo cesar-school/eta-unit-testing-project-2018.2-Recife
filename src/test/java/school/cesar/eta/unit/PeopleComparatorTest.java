@@ -65,7 +65,7 @@ public class PeopleComparatorTest {
         Person firstPerson = personBuilder
                 .builder();
         Person secondPerson = personBuilder
-                .setName("Ada")
+                .setName("Chimamanda")
                 .builder();
         assertTrue(peopleComparator.isSameFamily(firstPerson, secondPerson));
     }
@@ -75,8 +75,8 @@ public class PeopleComparatorTest {
         Person firstPerson = personBuilder
                 .builder();
         Person secondPerson = personBuilder
-                .setName("Ada")
-                .setLastName("Lovelace")
+                .setName("Chimamanda")
+                .setLastName("Ngozi")
                 .builder();
         assertFalse(peopleComparator.isSameFamily(firstPerson, secondPerson));
     }
@@ -86,8 +86,8 @@ public class PeopleComparatorTest {
         Person firstPerson = personBuilder
                 .builder();
         Person secondPerson = personBuilder
-                .setName("Ada")
-                .setCity("London")
+                .setName("Chimamanda")
+                .setCity("Ngozi")
                 .builder();
         assertFalse(peopleComparator.isSameFamily(firstPerson, secondPerson));
     }
@@ -97,8 +97,8 @@ public class PeopleComparatorTest {
         Person firstPerson = personBuilder
                 .builder();
         Person secondPerson = personBuilder
-                .setName("Ada")
-                .setState("MG")
+                .setName("Chimamanda")
+                .setState("PE")
                 .builder();
         assertFalse(peopleComparator.isSameFamily(firstPerson, secondPerson));
     }
@@ -120,7 +120,7 @@ public class PeopleComparatorTest {
     public void isSamePerson_twoPeopleWithSameInformationButName_false(){
         Person firstPerson = personBuilder.builder();
         Person secondPerson = personBuilder
-                .setName("Ada")
+                .setName("Chimamanda")
                 .builder();
         assertFalse(peopleComparator.isSamePerson(firstPerson, secondPerson));
     }
@@ -129,7 +129,7 @@ public class PeopleComparatorTest {
     public void isSamePerson_twoPeopleWithSameInformationButLastName_false(){
         Person firstPerson = personBuilder.builder();
         Person secondPerson = personBuilder
-                .setLastName("Lovelace")
+                .setLastName("Ngozi")
                 .builder();
         assertFalse(peopleComparator.isSamePerson(firstPerson, secondPerson));
     }
@@ -156,7 +156,7 @@ public class PeopleComparatorTest {
     public void isSamePerson_twoPeopleWithSameInformationButCity_false(){
         Person firstPerson = personBuilder.builder();
         Person secondPerson = personBuilder
-                .setCity("London")
+                .setCity("Recife")
                 .builder();
         assertFalse(peopleComparator.isSamePerson(firstPerson, secondPerson));
     }
@@ -165,7 +165,7 @@ public class PeopleComparatorTest {
     public void isSamePerson_twoPeopleWithSameInformationButState_false(){
         Person firstPerson = personBuilder.builder();
         Person secondPerson = personBuilder
-                .setState("MG")
+                .setState("PE")
                 .builder();
         assertFalse(peopleComparator.isSamePerson(firstPerson, secondPerson));
     }

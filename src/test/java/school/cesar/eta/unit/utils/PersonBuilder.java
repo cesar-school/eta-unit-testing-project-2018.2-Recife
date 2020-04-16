@@ -3,12 +3,12 @@ import school.cesar.eta.unit.entity.Person;
 import java.time.LocalDate;
 
 public class PersonBuilder {
-    private String name = "John";
-    private String lastName = "Doe";
+    private String name = "Maria";
+    private String lastName = "Silva";
     private LocalDate birthday = LocalDate.now();
     private String maritalStatus = "single";
-    private String city = "Recife";
-    private String state = "PE";
+    private String city = "Bancarios";
+    private String state = "PB";
 
     public PersonBuilder setName(String name) { this.name = name;
         return this;
