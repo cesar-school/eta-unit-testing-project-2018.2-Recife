@@ -15,7 +15,7 @@ public class PeopleComparatorTest {
     LocalDate now = LocalDate.now();
 
     @BeforeEach
-    public void setUpTest(){
+    public void ConfigPeople(){
         peopleComparator = new PeopleComparator(){
             @Override
             public LocalDate getCurrentDate(){
