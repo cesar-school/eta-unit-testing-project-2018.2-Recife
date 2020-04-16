@@ -8,7 +8,11 @@
 # Testes Unitários (Projeto)
 
 Projeto da disciplina de Testes Unitários da Especialização em Testes Ágeis, turma
-2018.2.
+2018.2. 
+Aluna: Vanessa Martins.
+
+# Sonar Link
+https://sonarcloud.io/dashboard?id=vanessamaartins1_unit-testing-project
 
 ## Projeto
 
