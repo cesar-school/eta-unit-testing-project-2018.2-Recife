@@ -26,7 +26,7 @@ public class PeopleComparatorTest {
     }
 
     @Test
-    public void todayIsThePersonBirthDay(){
+    public void isPersonBirthDay_todayIsThePersonBirthDay_true(){
         Person person = personBuilder
                 .setBirthday(now)
                 .builder();
@@ -34,7 +34,7 @@ public class PeopleComparatorTest {
     }
 
     @Test
-    public void todayIsNotThePersonBirthDay(){
+    public void isPersonBirthDay_todayIsThePersonBirthDay_false(){
         Person person = personBuilder
                 .setBirthday(now.minusDays(1))
                 .builder();
@@ -42,7 +42,7 @@ public class PeopleComparatorTest {
     }
 
     @Test
-    public void leapYearPersonBirthDayOnNonLeapYear(){
+    public void isLeapYearPersonBirthDay_leapYearPersonBirthDayOnNonLeapYear_false(){
         now = LocalDate.of(2018, Month.MARCH, 1);
         LocalDate birthday = LocalDate.of(1984, Month.FEBRUARY, 29);
         Person person = personBuilder
@@ -52,7 +52,7 @@ public class PeopleComparatorTest {
     }
 
     @Test
-    public void peopleWithSameInformation(){
+    public void isSameFamily_peopleWithSameInformation_false(){
         Person firstPerson = personBuilder
                 .builder();
         Person secondPerson = personBuilder
@@ -61,7 +61,7 @@ public class PeopleComparatorTest {
     }
 
     @Test
-    public void peopleWithSameInformationButName(){
+    public void isSameFamily_peopleWithSameInformationButName_true(){
         Person firstPerson = personBuilder
                 .builder();
         Person secondPerson = personBuilder
@@ -71,7 +71,7 @@ public class PeopleComparatorTest {
     }
 
     @Test
-    public void peopleWithSameInformationButNameAndLastName(){
+    public void isSameFamily_peopleWithSameInformationButNameAndLastName_false(){
         Person firstPerson = personBuilder
                 .builder();
         Person secondPerson = personBuilder
@@ -82,7 +82,7 @@ public class PeopleComparatorTest {
     }
 
     @Test
-    public void peopleWithSameInformationButNameAndCity(){
+    public void isSameFamily_peopleWithSameInformationButNameAndCity_false(){
         Person firstPerson = personBuilder
                 .builder();
         Person secondPerson = personBuilder
@@ -93,7 +93,7 @@ public class PeopleComparatorTest {
     }
 
     @Test
-    public void peopleWithSameInformationButNameAndState(){
+    public void isSameFamily_peopleWithSameInformationButNameAndState_false(){
         Person firstPerson = personBuilder
                 .builder();
         Person secondPerson = personBuilder
@@ -104,20 +104,20 @@ public class PeopleComparatorTest {
     }
 
     @Test
-    public void twoPeopleWithSameInformation(){
+    public void isSamePerson_twoPeopleWithSameInformation_true(){
         Person firstPerson = personBuilder.builder();
         Person secondPerson = personBuilder.builder();
         assertTrue(peopleComparator.isSamePerson(firstPerson, secondPerson));
     }
 
     @Test
-    public void twoPeopleWithSameObjectInstance(){
+    public void isSamePerson_twoPeopleWithSameObjectInstance_throwsException(){
         Person person = personBuilder.builder();
         assertThrows(RuntimeException.class, () -> peopleComparator.isSamePerson(person, person));
     }
 
     @Test
-    public void twoPeopleWithSameInformationButName(){
+    public void isSamePerson_twoPeopleWithSameInformationButName_false(){
         Person firstPerson = personBuilder.builder();
         Person secondPerson = personBuilder
                 .setName("Ada")
@@ -126,7 +126,7 @@ public class PeopleComparatorTest {
     }
 
     @Test
-    public void twoPeopleWithSameInformationButLastName(){
+    public void isSamePerson_twoPeopleWithSameInformationButLastName_false(){
         Person firstPerson = personBuilder.builder();
         Person secondPerson = personBuilder
                 .setLastName("Lovelace")
@@ -135,7 +135,7 @@ public class PeopleComparatorTest {
     }
 
     @Test
-    public void twoPeopleWithSameInformationButBirthday(){
+    public void isSamePerson_twoPeopleWithSameInformationButBirthday_false(){
         Person firstPerson = personBuilder.builder();
         Person secondPerson = personBuilder
                 .setBirthday(now.minusDays(1))
@@ -144,7 +144,7 @@ public class PeopleComparatorTest {
     }
 
     @Test
-    public void twoPeopleWithSameInformationButMaritalStatus(){
+    public void isSamePerson_twoPeopleWithSameInformationButMaritalStatus_false(){
         Person firstPerson = personBuilder.builder();
         Person secondPerson = personBuilder
                 .setMaritalStatus("married")
@@ -153,7 +153,7 @@ public class PeopleComparatorTest {
     }
 
     @Test
-    public void twoPeopleWithSameInformationButCity(){
+    public void isSamePerson_twoPeopleWithSameInformationButCity_false(){
         Person firstPerson = personBuilder.builder();
         Person secondPerson = personBuilder
                 .setCity("London")
@@ -162,7 +162,7 @@ public class PeopleComparatorTest {
     }
 
     @Test
-    public void twoPeopleWithSameInformationButState(){
+    public void isSamePerson_twoPeopleWithSameInformationButState_false(){
         Person firstPerson = personBuilder.builder();
         Person secondPerson = personBuilder
                 .setState("MG")
