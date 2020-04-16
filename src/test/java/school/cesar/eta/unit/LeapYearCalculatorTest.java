@@ -8,10 +8,13 @@ public class LeapYearCalculatorTest {
     @InjectMocks
     LeapYearCalculator application;
 
-//   @Test
-//    public void  isLeapYear_yearNonDivisibleByFour_false() {
-//        Assertions.assertFalse(application.isCurrentYearLeapYear());
-//    }
+
+   @Test
+    public void  isLeapYear_yearNonDivisibleByFour_false() {
+    application = new LeapYearCalculator();
+        Assertions.assertTrue(application.isCurrentYearLeapYear());
+    }
+
 //
 //    @Test
 //    public void isLeapYear_yearDivisibleByFour_true() {
